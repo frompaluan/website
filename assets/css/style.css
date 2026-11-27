@@ -29,8 +29,12 @@
 }
 
 /* modo escuro: todos os pares de texto e fundo passam de 4,5:1 (WCAG AA) */
-@media (prefers-color-scheme: dark) {
-  :root {
+/* Tema escuro. O assets/js/tema.js marca o <html> com data-theme="light" ou "dark"
+   (escolha salva no botão ou, sem escolha, o tema do sistema).
+   Sem JavaScript, o @media abaixo segue o sistema. */
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
     --fundo: #0F1415;
     --superficie: #1A2123;
     --texto: #F2F2F4;
@@ -41,6 +45,19 @@
     --acento-hover: #C2E8E4;
     --sobre-acento: #0B3B3F;
     --vidro: rgba(15, 20, 21, 0.86);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+      --fundo: #0F1415;
+      --superficie: #1A2123;
+      --texto: #F2F2F4;
+      --texto-2: #A8AFB1;
+      --titulo: #F5F5F7;
+      --divisoria: #2B3335;
+      --acento: #A6DCD7;
+      --acento-hover: #C2E8E4;
+      --sobre-acento: #0B3B3F;
+      --vidro: rgba(15, 20, 21, 0.86);
   }
 }
 * { box-sizing: border-box; }
@@ -122,6 +139,19 @@ body::before {
 .btn-link { color: var(--titulo); padding-inline: 4px; }
 .btn-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .btn-pequeno { padding: 10px 16px; font-size: 14px; }
+
+/* botão de tema */
+.tema {
+  display: inline-grid; place-items: center;
+  width: 40px; height: 40px; padding: 0; border-radius: 50%;
+  border: 1px solid var(--divisoria); background: transparent; color: var(--texto);
+  cursor: pointer; transition: background .15s, border-color .15s;
+}
+.tema:hover { background: var(--superficie); }
+.tema svg { width: 18px; height: 18px; }
+.tema .icone-sol { display: none; }
+:root[data-theme="dark"] .tema .icone-sol { display: block; }
+:root[data-theme="dark"] .tema .icone-lua { display: none; }
 
 /* abertura */
 .abertura { padding-block: clamp(72px, 12vw, 148px) clamp(64px, 9vw, 112px); }
@@ -252,10 +282,19 @@ section { scroll-margin-top: 72px; }
   .rodape { padding-bottom: 104px; }
 }
 
-/* modo escuro: o grifo vira texto amarelo com um traço embaixo (texto claro sobre amarelo não teria contraste).
-   Fica no fim do arquivo para vencer a regra base do .grifo. */
+/* troca de logo e grifo no tema escuro (fica no fim para vencer as regras base).
+   No escuro o grifo vira texto amarelo com um traço embaixo: texto claro sobre amarelo não teria contraste. */
+.logo-escuro { display: none; }
+:root[data-theme="dark"] .logo-claro { display: none; }
+:root[data-theme="dark"] .logo-escuro { display: block; }
+:root[data-theme="dark"] .grifo {
+  color: var(--sol);
+  background: linear-gradient(transparent 88%, var(--sol) 88%, var(--sol) 95%, transparent 95%);
+}
 @media (prefers-color-scheme: dark) {
-  .grifo {
+  :root:not([data-theme]) .logo-claro { display: none; }
+  :root:not([data-theme]) .logo-escuro { display: block; }
+  :root:not([data-theme]) .grifo {
     color: var(--sol);
     background: linear-gradient(transparent 88%, var(--sol) 88%, var(--sol) 95%, transparent 95%);
   }

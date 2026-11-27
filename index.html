@@ -29,17 +29,22 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..700&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 
+<script src="assets/js/tema.js"></script>
 <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 <header class="topo" id="topo">
   <div class="wrap">
     <a class="logo-link" href="#inicio" aria-label="Paluan, voltar ao início">
-      <picture><source srcset="assets/img/paluan-logo-claro.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan"></picture>
+      <img class="logo logo-claro" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan"><img class="logo logo-escuro" src="assets/img/paluan-logo-claro.svg" width="424" height="139" alt="Paluan">
     </a>
     <nav class="nav" aria-label="Seções">
       <a class="texto" href="#como-funciona">Como funciona</a>
       <a class="texto" href="#projetos">Projetos</a>
+      <button class="tema" id="botao-tema" type="button" aria-label="Usar tema escuro">
+        <svg class="icone-lua" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5a8.5 8.5 0 1 0 10.6 10.6Z"/></svg>
+        <svg class="icone-sol" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></svg>
+      </button>
       <a class="btn btn-primario btn-pequeno" href="https://ig.me/m/frompaluan" target="_blank" rel="noopener">Fale com a gente</a>
     </nav>
   </div>
@@ -173,7 +178,7 @@
 
 <footer class="rodape">
   <div class="wrap">
-    <picture><source srcset="assets/img/paluan-logo-claro.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan"></picture>
+    <img class="logo logo-claro" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan"><img class="logo logo-escuro" src="assets/img/paluan-logo-claro.svg" width="424" height="139" alt="Paluan">
     <span>Menos atrito. Mais negócio. · <a href="https://www.instagram.com/frompaluan/" target="_blank" rel="noopener">@frompaluan</a> · © 2026 Paluan</span>
   </div>
 </footer>
