@@ -1,206 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paluan · Menos atrito. Mais negócio.</title>
+<meta name="description" content="A Paluan ajuda pequenas empresas a tirar o atrito que trava o crescimento: processos, presença e organização. Menos atrito. Mais negócio.">
+<meta property="og:title" content="Paluan · Menos atrito. Mais negócio.">
+<meta property="og:description" content="Processos, presença e organização para pequenas empresas venderem mais e trabalharem com menos bagunça.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Paluan">
+<meta property="og:url" content="https://www.frompaluan.com.br/">
+<meta property="og:image" content="https://www.frompaluan.com.br/assets/img/og-paluan.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logotipo da Paluan">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://www.frompaluan.com.br/">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Paluan — Em breve</title>
-
-  <meta name="description" content="Paluan. Menos atrito. Mais resultado." />
-  <meta name="theme-color" content="#0d0a12" />
-  <meta name="color-scheme" content="dark" />
-
-  <!-- Open Graph / redes sociais -->
-  <meta property="og:title" content="Paluan — Em breve" />
-  <meta property="og:description" content="Menos atrito. Mais resultado." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="./paluan_apple_3840x2160.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
-  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <style>
-    :root {
-      --bg: #0d0a12;
-      --fg: #eaeaea;
-      --accent: #8b5cf6;
-      --fg-muted: rgba(234, 234, 234, 0.7);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      width: 100%;
-      min-height: 100%;
-    }
-
-    /* Mobile first: imagem cobre a tela toda, ancorada no centro
-       (é onde o "P" está), sem repetir e sem gerar scroll. */
-    body {
-      min-height: 100dvh;
-
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-      font-weight: 400;
-
-      color: var(--fg);
-      background-color: var(--bg);
-      background-image: url("./paluan_apple_3840x2160.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      background-attachment: fixed;
-
-      overflow: hidden;
-    }
-
-    .page {
-      min-height: 100dvh;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
-      gap: 40px;
-
-      padding:
-        max(24px, env(safe-area-inset-top))
-        20px
-        max(28px, env(safe-area-inset-bottom));
-
-      animation: fade-in 0.9s ease both;
-    }
-
-    main {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 0.95rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      line-height: 1.5;
-      max-width: 26ch;
-    }
-
-    footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      gap: 20px;
-
-      font-size: 0.75rem;
-    }
-
-    footer a {
-      color: var(--fg-muted);
-      text-decoration: none;
-
-      transition: color 0.2s ease;
-    }
-
-    footer a:hover,
-    footer a:focus-visible {
-      color: var(--fg);
-    }
-
-    footer a:focus-visible {
-      outline: 1px solid var(--accent);
-      outline-offset: 4px;
-      border-radius: 2px;
-    }
-
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(6px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .page {
-        animation: none;
-      }
-    }
-
-    /* Tablet e acima: layout original, texto centralizado na tela toda */
-    @media (min-width: 768px) {
-      .page {
-        justify-content: center;
-        gap: 0;
-        padding: 40px;
-      }
-
-      main {
-        flex: 1;
-        align-items: center;
-      }
-
-      h1 {
-        font-size: clamp(1rem, 2.2vw, 1.35rem);
-        max-width: 32ch;
-      }
-
-      footer {
-        gap: 28px;
-        font-size: 0.875rem;
-      }
-    }
-
-    /* iOS Safari não suporta bem background-attachment: fixed */
-    @supports (-webkit-touch-callout: none) {
-      body {
-        background-attachment: scroll;
-      }
-    }
-  </style>
+<script src="assets/js/main.js" defer></script>
 </head>
-
 <body>
-  <div class="page">
-
-    <main>
-      <h1>Em breve. Menos atrito, mais resultado.</h1>
-    </main>
-
-    <footer>
-      <a
-        href="https://www.instagram.com/frompaluan/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Instagram
-      </a>
-
-      <a
-        href="https://github.com/frompaluan"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
-    </footer>
-
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="logo-link" href="#inicio" aria-label="Paluan, voltar ao início">
+      <img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan">
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a class="texto" href="#como-funciona">Como funciona</a>
+      <a class="texto" href="#projetos">Projetos</a>
+      <a class="btn btn-primario btn-pequeno" href="https://ig.me/m/frompaluan" target="_blank" rel="noopener">Fale com a gente</a>
+    </nav>
   </div>
+</header>
+
+<main id="inicio">
+  <section class="abertura">
+    <div class="wrap">
+      <p class="sobrelinha">Processos, presença e organização para pequenas empresas</p>
+      <h1>Menos atrito. Mais <span class="grifo">negócio</span>.</h1>
+      <p class="lead">Pedido que se perde no WhatsApp, orçamento que demora, cliente que não entende o que você faz. A Paluan encontra o que está travando a sua empresa e arruma, do jeito mais simples que funcionar.</p>
+      <div class="acoes" id="acoes-abertura">
+        <a class="btn btn-primario" href="https://ig.me/m/frompaluan" target="_blank" rel="noopener"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg>Chamar no Instagram</a>
+        <a class="btn btn-link" href="#como-funciona">Ver como funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="atritos">
+    <div class="wrap">
+      <div class="secao-cabeca">
+        <p class="rotulo">O que a gente resolve</p>
+        <h2>Onde as pequenas empresas costumam <span class="grifo">emperrar</span></h2>
+        <p>Quase nunca falta esforço. Falta um jeito combinado de fazer as coisas, e o dono acaba apagando incêndio o dia inteiro.</p>
+      </div>
+      <div class="atritos">
+        <div class="atrito"><h3>Pedidos espalhados</h3><p>Entre WhatsApp, caderno e planilha, ninguém sabe o que está pendente nem o que já foi entregue.</p></div>
+        <div class="atrito"><h3>Orçamento que demora</h3><p>Cada orçamento é feito do zero, e o cliente fecha com quem respondeu primeiro.</p></div>
+        <div class="atrito"><h3>Tudo depende do dono</h3><p>Se você para um dia, a empresa para junto. Ninguém mais sabe fazer do seu jeito.</p></div>
+        <div class="atrito"><h3>Presença confusa</h3><p>O cliente procura seu nome e não entende o que você faz, quanto custa ou como contratar.</p></div>
+        <div class="atrito"><h3>Dinheiro no escuro</h3><p>Vende bem, mas não sabe quanto sobra no fim do mês nem qual serviço dá mais lucro.</p></div>
+        <div class="atrito"><h3>Retrabalho</h3><p>O mesmo erro volta toda semana porque cada pessoa faz de um jeito.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="como-funciona">
+    <div class="wrap">
+      <div class="secao-cabeca">
+        <p class="rotulo">Como funciona</p>
+        <h2>Primeiro entender. Depois <span class="grifo">arrumar</span>.</h2>
+        <p>Nada de pacote pronto. Você só investe no projeto depois de saber exatamente o que vai mudar.</p>
+      </div>
+      <div class="etapas">
+        <article class="etapa">
+          <span class="num">1</span>
+          <h3>Diagnóstico</h3>
+          <p class="preco">R$ 490</p>
+          <p class="desc">Acompanhamos a sua rotina, do primeiro contato do cliente à entrega. Você recebe um mapa do que trava e do que resolver primeiro.</p>
+          <p class="nota">Se fechar um projeto em até 30 dias, o valor vira desconto.</p>
+        </article>
+        <article class="etapa">
+          <span class="num">2</span>
+          <h3>Projeto</h3>
+          <p class="preco">Preço fechado</p>
+          <p class="desc">Resolvemos o ponto principal com escopo, prazo e valor definidos antes de começar. Sem surpresa no meio do caminho.</p>
+          <p class="nota">Presença, Fluxo ou Sistema, conforme o diagnóstico.</p>
+        </article>
+        <article class="etapa">
+          <span class="num">3</span>
+          <h3>Acompanhamento</h3>
+          <p class="preco">Mensal</p>
+          <p class="desc">Ajustes, suporte e melhorias para o que foi feito continuar funcionando quando a empresa crescer.</p>
+          <p class="nota">Opcional, no tamanho que a empresa precisar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="projetos">
+    <div class="wrap">
+      <div class="secao-cabeca">
+        <p class="rotulo">Projetos</p>
+        <h2>Três caminhos, cada um com <span class="grifo">preço fechado</span></h2>
+        <p>Projetos a partir de R$ 2.900. O valor exato sai do diagnóstico e fica combinado antes de começar.</p>
+        <p>Tecnologia entra só quando ajuda de verdade. Na maioria das vezes, organizar o processo já resolve.</p>
+      </div>
+      <div class="projetos">
+        <article class="projeto">
+          <h3>Presença</h3>
+          <p class="para">Para ser encontrado e entendido.</p>
+          <ul class="inclui">
+            <li>Identidade visual simples e consistente</li>
+            <li>Página na internet com seus serviços e contato</li>
+            <li>WhatsApp Business e Instagram organizados</li>
+            <li>Apresentação comercial para enviar a clientes</li>
+          </ul>
+        </article>
+        <article class="projeto">
+          <h3>Fluxo</h3>
+          <p class="para">Para parar de perder tempo e pedidos.</p>
+          <ul class="inclui">
+            <li>Mapa do processo, do pedido à entrega</li>
+            <li>Modelos de orçamento e de atendimento</li>
+            <li>Controle de pedidos simples, que a equipe usa</li>
+            <li>Treinamento para todo mundo fazer igual</li>
+          </ul>
+        </article>
+        <article class="projeto">
+          <h3>Sistema</h3>
+          <p class="para">Quando a planilha não dá mais conta.</p>
+          <ul class="inclui">
+            <li>Ferramenta sob medida para o seu processo</li>
+            <li>Pedidos, produção, estoque ou impressão</li>
+            <li>Acesso pelo computador e pelo celular</li>
+            <li>Implantação e treinamento da equipe</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="acompanhamento">
+        <div>
+          <h3>Depois do projeto</h3>
+          <p>O acompanhamento mensal mantém tudo funcionando: ajustes, dúvidas da equipe e melhorias conforme a empresa cresce.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="contato">
+    <div class="wrap">
+      <h2>Me conte o que está <span class="grifo">travando</span>.</h2>
+      <p>Uma mensagem já basta. A gente conversa sobre a sua empresa e vê se o diagnóstico faz sentido para você.</p>
+      <div class="contato">
+        <a class="btn btn-primario" href="https://ig.me/m/frompaluan" target="_blank" rel="noopener"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg>Chamar no Instagram</a>
+        <a class="instagram" href="https://www.instagram.com/frompaluan/" target="_blank" rel="noopener">Instagram <b>@frompaluan</b></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan">
+    <span>Menos atrito. Mais negócio. · <a href="https://www.instagram.com/frompaluan/" target="_blank" rel="noopener">@frompaluan</a> · © 2026 Paluan</span>
+  </div>
+</footer>
+
+<div class="barra-movel" id="barra-movel">
+  <a class="btn btn-primario" href="https://ig.me/m/frompaluan" target="_blank" rel="noopener"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg>Chamar no Instagram</a>
+</div>
+
 </body>
 </html>
