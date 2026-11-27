@@ -16,7 +16,9 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logotipo da Paluan">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1415" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://www.frompaluan.com.br/">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -33,7 +35,7 @@
 <header class="topo" id="topo">
   <div class="wrap">
     <a class="logo-link" href="#inicio" aria-label="Paluan, voltar ao início">
-      <img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan">
+      <picture><source srcset="assets/img/paluan-logo-claro.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan"></picture>
     </a>
     <nav class="nav" aria-label="Seções">
       <a class="texto" href="#como-funciona">Como funciona</a>
@@ -171,7 +173,7 @@
 
 <footer class="rodape">
   <div class="wrap">
-    <img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan">
+    <picture><source srcset="assets/img/paluan-logo-claro.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/paluan-logo.svg" width="424" height="139" alt="Paluan"></picture>
     <span>Menos atrito. Mais negócio. · <a href="https://www.instagram.com/frompaluan/" target="_blank" rel="noopener">@frompaluan</a> · © 2026 Paluan</span>
   </div>
 </footer>
